@@ -33,28 +33,27 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
   }, []);
   
   console.debug(devices, '::', device);
-  if (device == null) return <ActivityIndicator />;
 
   return (
-    <Camera
-      style={StyleSheet.absoluteFill}
-      device={device!}
-      isActive={isCameraActive}
-      onError={onError}
-    />
-    // <View style={styles.container}>
-    //   {/* <Text style={styles.title}>Tab One</Text>
-    //   <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-    //   <TouchableOpacity onPress={() => setCameraActive(true)}>
-    //     <Text>aaa</Text>
-    //   </TouchableOpacity> */}
-    //   {device ? <Camera
-    //     style={StyleSheet.absoluteFill}
-    //     device={device}
-    //     isActive={isCameraActive}
-    //   /> :  <ActivityIndicator />}
-    //   <EditScreenInfo path="/screens/TabOneScreen.tsx" />
-    // </View>
+    // <Camera
+    //   style={StyleSheet.absoluteFill}
+    //   device={device!}
+    //   isActive={isCameraActive}
+    //   onError={onError}
+    // />
+    <View style={styles.container}>
+      <Text style={styles.title}>Tab One</Text>
+      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+      <TouchableOpacity onPress={() => setCameraActive(true)}>
+        <Text>aaa</Text>
+      </TouchableOpacity>
+      {/* {device ? <Camera
+        style={StyleSheet.absoluteFill}
+        device={device}
+        isActive={isCameraActive}
+      /> :  <ActivityIndicator />} */}
+      <EditScreenInfo path="/screens/TabOneScreen.tsx" />
+    </View>
   );
 }
 
